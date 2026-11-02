@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMB Construções | Serviços Profissionais de Construção e Acabamento</title>
+    <meta name="description" content="BMB Construções - Especialista em reboco tradicional, reboco grego, contrapiso, telhados, pequenos reparos e alvenaria com capricho, transparência e pontualidade.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter & Montserrat (Tipografia forte e moderna inspirada no MasterBuild) -->
+    <!-- LINK DA FONTE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- LINK DA FONTE GOOGLE FONTS (PRECONNECT) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- LINK DE ESTILO DAS FONTES INTER E MONTSERRAT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons para Ícones de Construção e Redes Sociais -->
+    <!-- LINK DA BIBLIOTECA DE ÍCONES FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bmb: {
+                            yellow: '#FFCC00',
+                            yellowHover: '#E6B800',
+                            black: '#0F0F0F',
+                            dark: '#18181B',
+                            gray: '#27272A',
+                            light: '#F8F9FA'
+                        },
+                        whatsapp: {
+                            DEFAULT: '#25D366',
+                            dark: '#1DA851'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos personalizados e utilitários visuais */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #0F0F0F;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ==========================================================================
+           IMAGEM DE FUNDO DO BANNER PRINCIPAL (HERO SECTION)
+           Para alterar a imagem de fundo do topo do site, substitua a URL abaixo
+           dentro de url('...') pelo caminho ou link da sua foto de obra/construção.
+           ========================================================================== */
+        .hero-bg {
+            background-image: linear-gradient(
+                to right,
+                rgba(10, 10, 10, 0.90) 0%,
+                rgba(15, 15, 15, 0.78) 55%,
+                rgba(15, 15, 15, 0.65) 100%
+            ),
+            /* IMAGEM DO BANNER PRINCIPAL (BACKGROUND CSS) */
+            url('https://i.postimg.cc/X7NK5Kj4/IMG-4c8075c2-7c2e-45d7-9b34-57b7706ca07c.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Padrão sutil geométrico para seções escuras */
+        .pattern-grid {
+            background-image: radial-gradient(rgba(255, 204, 0, 0.12) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        /* Animação suave no botão flutuante do WhatsApp */
+        @keyframes pulse-green {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-pulse {
+            animation: pulse-green 2.2s infinite;
+        }
+
+        /* Efeito de elevação nos cards */
+        .card-hover {
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(15, 15, 15, 0.14);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-bmb-yellow selection:text-bmb-black">
+
+    <!-- ============================================================================
+         CABEÇALHO / BARRA DE NAVEGAÇÃO (INSPIRADO NO MASTERBUILD + LOGO BMB)
+         ============================================================================ -->
+    <header class="sticky top-0 z-50 bg-bmb-yellow border-b-4 border-bmb-black shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- LOGO BMB CONSTRUÇÕES NO CABEÇALHO -->
+                <!-- LINK DA LOGO NO CABEÇALHO (VOLTA PARA O INÍCIO) -->
+                <a href="#inicio" class="flex items-center gap-3 group focus:outline-none" aria-label="BMB Construções - Ir para o Início">
+                    <!-- Container da Logo Oficial BMB Construções (Vetor fiel à imagem enviada + opção de tag img) -->
+                    <div class="w-14 h-14 bg-bmb-yellow border-2 border-bmb-black rounded-xl flex items-center justify-center p-1 shadow-sm group-hover:scale-105 transition-transform">
+                        <!-- 
+                             NOTA PARA EDIÇÃO MANUAL DA LOGO:
+                             Caso prefira usar o arquivo de imagem .jpg/.png diretamente, basta descomentar a linha <img> abaixo
+                             e comentar o bloco <svg>.
+                        -->
+                        <!-- IMAGEM DA LOGO BMB CONSTRUÇÕES NO CABEÇALHO (OPCIONAL PARA ARQUIVO LOCAL) -->
+                        <!-- <img src="Gemini_Generated_Image_jmkq99jmkq99jmkq.jpg" alt="Logo BMB Construções" class="w-full h-full object-contain rounded-lg"> -->
+
+                        <!-- IMAGEM VETORIAL FIEL DA LOGO BMB CONSTRUÇÕES (CASA + BMB HEXAGONAL + COLHER DE PEDREIRO) -->
+                        <svg viewBox="0 0 200 200" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo BMB Construções">
+                            <!-- Telhado e Chaminé -->
+                            <path d="M100 22L28 65V79L100 36L172 79V65L100 22Z" fill="#0F0F0F"/>
+                            <rect x="57" y="34" width="13" height="22" fill="#0F0F0F"/>
+                            <!-- Letra B Esquerda (Formato Hexagonal) -->
+                            <path d="M44 77L74 59V137L44 119V77ZM53 83V94H65V71L53 78V83ZM53 102V113L65 120V102H53Z" fill="#0F0F0F"/>
+                            <!-- Letra M Central -->
+                            <path d="M79 56L89 50L100 88L111 50L121 56V141L112 146V77L103 105H97L88 77V146L79 141V56Z" fill="#0F0F0F"/>
+                            <!-- Letra B Direita (Formato Hexagonal) -->
+                            <path d="M126 59L156 77V119L126 137V59ZM135 71V94H147V78L135 71ZM135 102V120L147 113V102H135Z" fill="#0F0F0F"/>
+                            <!-- Base em V e Colher de Pedreiro Central -->
+                            <path d="M44 126L94 155V166L44 137V126Z" fill="#0F0F0F"/>
+                            <path d="M156 126L106 155V166L156 137V126Z" fill="#0F0F0F"/>
+                            <!-- Colher de Pedreiro -->
+                            <path d="M100 124C96 124 91 139 91 143C91 145 95 146 99 146V154H97V168C97 171 98.5 173 100 173C101.5 173 103 171 103 168V154H101V146C105 146 109 145 109 143C109 139 104 124 100 124Z" fill="#0F0F0F"/>
+                            <!-- Texto CONSTRUÇÕES -->
+                            <text x="100" y="193" text-anchor="middle" fill="#0F0F0F" font-family="Montserrat, sans-serif" font-weight="900" font-size="19" letter-spacing="0.5">CONSTRUÇÕES</text>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-black text-xl sm:text-2xl tracking-tight text-bmb-black leading-none">
+                            BMB <span class="font-extrabold">Construções</span>
+                        </span>
+                        <span class="text-xs font-bold uppercase tracking-widest text-bmb-black/80 mt-0.5">
+                            Serviços & Acabamentos
+                        </span>
+                    </div>
+                </a>
+
+                <!-- MENU DE NAVEGAÇÃO DESKTOP -->
+                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2" aria-label="Menu Principal">
+                    <!-- LINK DO MENU: INÍCIO -->
+                    <a href="#inicio" class="px-3.5 py-2 rounded-lg text-sm font-bold text-bmb-black hover:bg-bmb-black/10 transition flex items-center gap-2">
+                        <i class="fa-solid fa-house text-xs"></i> Início
+                    </a>
+                    <!-- LINK DO MENU: SERVIÇOS -->
+                    <a href="#servicos" class="px-3.5 py-2 rounded-lg text-sm font-bold text-bmb-black hover:bg-bmb-black/10 transition flex items-center gap-2">
+                        <i class="fa-solid fa-trowel-bricks text-xs"></i> Serviços
+                    </a>
+                    <!-- LINK DO MENU: SOBRE MIM -->
+                    <a href="#sobre" class="px-3.5 py-2 rounded-lg text-sm font-bold text-bmb-black hover:bg-bmb-black/10 transition flex items-center gap-2">
+                        <i class="fa-solid fa-user-check text-xs"></i> Sobre Mim
+                    </a>
+                    <!-- LINK DO MENU: FERRAMENTAS -->
+                    <a href="#ferramentas" class="px-3.5 py-2 rounded-lg text-sm font-bold text-bmb-black hover:bg-bmb-black/10 transition flex items-center gap-2">
+                        <i class="fa-solid fa-screwdriver-wrench text-xs"></i> Ferramentas
+                    </a>
+                    <!-- LINK DO MENU: REDES SOCIAIS -->
+                    <a href="#redes-sociais" class="px-3.5 py-2 rounded-lg text-sm font-bold text-bmb-black hover:bg-bmb-black/10 transition flex items-center gap-2">
+                        <i class="fa-solid fa-share-nodes text-xs"></i> Redes Sociais
+                    </a>
+
+                    <!-- BOTÃO CTA DO CABEÇALHO (ESTILO MASTERBUILD) -->
+                    <!-- LINK DO BOTÃO SOLICITAR ORÇAMENTO NO MENU -->
+                    <a href="#orcamento" class="ml-3 px-5 py-2.5 rounded-xl bg-bmb-black text-bmb-yellow font-bold text-sm hover:bg-zinc-800 transition shadow-md flex items-center gap-2">
+                        <i class="fa-regular fa-comment-dots"></i> Solicitar Orçamento
+                    </a>
+                </nav>
+
+                <!-- BOTÃO HAMBÚRGUER PARA CELULAR (MOBILE) -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl bg-bmb-black text-bmb-yellow hover:bg-zinc-800 focus:outline-none" aria-label="Abrir Menu de Navegação">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MENU DROPDOWN MOBILE -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-bmb-yellow border-t-2 border-bmb-black px-4 pt-3 pb-5 space-y-2 shadow-xl">
+            <!-- LINK MOBILE: INÍCIO -->
+            <a href="#inicio" class="mobile-nav-link block px-4 py-2.5 rounded-lg font-bold text-bmb-black hover:bg-bmb-black/10 flex items-center gap-3">
+                <i class="fa-solid fa-house w-5 text-center"></i> Início
+            </a>
+            <!-- LINK MOBILE: SERVIÇOS -->
+            <a href="#servicos" class="mobile-nav-link block px-4 py-2.5 rounded-lg font-bold text-bmb-black hover:bg-bmb-black/10 flex items-center gap-3">
+                <i class="fa-solid fa-trowel-bricks w-5 text-center"></i> Serviços
+            </a>
+            <!-- LINK MOBILE: SOBRE MIM -->
+            <a href="#sobre" class="mobile-nav-link block px-4 py-2.5 rounded-lg font-bold text-bmb-black hover:bg-bmb-black/10 flex items-center gap-3">
+                <i class="fa-solid fa-user-check w-5 text-center"></i> Sobre Mim
+            </a>
+            <!-- LINK MOBILE: FERRAMENTAS -->
+            <a href="#ferramentas" class="mobile-nav-link block px-4 py-2.5 rounded-lg font-bold text-bmb-black hover:bg-bmb-black/10 flex items-center gap-3">
+                <i class="fa-solid fa-screwdriver-wrench w-5 text-center"></i> Ferramentas
+            </a>
+            <!-- LINK MOBILE: REDES SOCIAIS -->
+            <a href="#redes-sociais" class="mobile-nav-link block px-4 py-2.5 rounded-lg font-bold text-bmb-black hover:bg-bmb-black/10 flex items-center gap-3">
+                <i class="fa-solid fa-share-nodes w-5 text-center"></i> Redes Sociais
+            </a>
+            <!-- LINK MOBILE: SOLICITAR ORÇAMENTO -->
+            <a href="#orcamento" class="mobile-nav-link block mt-3 px-4 py-3 rounded-xl bg-bmb-black text-bmb-yellow font-bold text-center shadow-md">
+                <i class="fa-regular fa-comment-dots mr-2"></i> Solicitar Orçamento
+            </a>
+        </div>
+    </header>
+
+    <!-- ============================================================================
+         1. SEÇÃO INÍCIO (HERO SECTION INSPIRADA NO MASTERBUILD)
+         ============================================================================ -->
+    <section id="inicio" class="relative hero-bg min-h-[560px] lg:min-h-[640px] flex items-center border-b-8 border-bmb-yellow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
+            <div class="max-w-3xl">
+                <!-- Tag Amarela Superior (Estilo MasterBuild "QUALITY & TRUST") -->
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-bmb-yellow text-bmb-black font-display font-extrabold text-xs sm:text-sm uppercase tracking-wider mb-6 shadow-md">
+                    <i class="fa-solid fa-helmet-safety"></i> QUALIDADE & CONFIANÇA
+                </div>
+
+                <!-- Título Principal de Alto Impacto -->
+                <h1 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight mb-6">
+                    Serviços Profissionais de 
+                    <span class="text-bmb-yellow">Construção &</span> 
+                    Acabamento
+                </h1>
+
+                <!-- Subtítulo Explicativo -->
+                <p class="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed mb-10 max-w-2xl font-normal">
+                    Do reboco tradicional e grego à alvenaria e telhados — soluções completas para sua obra com capricho minucioso, transparência nos prazos e preço justo para você.
+                </p>
+
+                <!-- Botões de Ação (CTAs do Banner Principal) -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <!-- LINK DO BOTÃO "NOSSOS SERVIÇOS" NO BANNER PRINCIPAL -->
+                    <a href="#servicos" class="px-8 py-4 rounded-xl bg-bmb-yellow hover:bg-bmb-yellowHover text-bmb-black font-display font-extrabold text-base transition shadow-lg flex items-center justify-center gap-3">
+                        Nossos Serviços <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </a>
+
+                    <!-- LINK DO BOTÃO "SOLICITAR ORÇAMENTO" NO BANNER PRINCIPAL -->
+                    <a href="#orcamento" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-display font-bold text-base transition flex items-center justify-center gap-3">
+                        <i class="fa-regular fa-comment-dots text-bmb-yellow"></i> Faça um Orçamento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA PRETA DE DESTAQUES / CREDIBILIDADE (INSPIRADA NA FAIXA PRETA DO MASTERBUILD) -->
+    <section class="bg-bmb-black text-white py-10 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-zinc-800">
+                <div class="pt-4 sm:pt-0 px-2">
+                    <div class="font-display font-black text-3xl sm:text-4xl text-bmb-yellow mb-1">+2 Anos</div>
+                    <p class="text-xs sm:text-sm text-gray-300 font-medium">De Experiência Prática na Obra</p>
+                </div>
+                <div class="pt-4 sm:pt-0 px-2">
+                    <div class="font-display font-black text-3xl sm:text-4xl text-bmb-yellow mb-1">100%</div>
+                    <p class="text-xs sm:text-sm text-gray-300 font-medium">Capricho e Cuidado Minucioso</p>
+                </div>
+                <div class="pt-4 sm:pt-0 px-2">
+                    <div class="font-display font-black text-3xl sm:text-4xl text-bmb-yellow mb-1">No Prazo</div>
+                    <p class="text-xs sm:text-sm text-gray-300 font-medium">Transparência e Pontualidade</p>
+                </div>
+                <div class="pt-4 sm:pt-0 px-2">
+                    <div class="font-display font-black text-3xl sm:text-4xl text-bmb-yellow mb-1">Obra Limpa</div>
+                    <p class="text-xs sm:text-sm text-gray-300 font-medium">Ambiente Organizado Todo Fim de Dia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         2. SEÇÃO DE SERVIÇOS (OS 7 SERVIÇOS ESPECIFICADOS NO PDF)
+         (Nota: Sem qualquer seção de Antes e Depois, conforme restrição de escopo)
+         ============================================================================ -->
+    <section id="servicos" class="py-20 bg-bmb-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-block px-4 py-1.5 rounded-md bg-bmb-yellow text-bmb-black font-display font-extrabold text-xs uppercase tracking-wider mb-3 shadow-sm">
+                    O QUE FAZEMOS
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-bmb-black tracking-tight mb-4">
+                    Nossos Serviços na Obra
+                </h2>
+                <p class="text-zinc-600 text-base sm:text-lg">
+                    Execução profissional de serviços gerais na construção civil com acabamento impecável, materiais bem dimensionados e preço justo.
+                </p>
+            </div>
+
+            <!-- Grid dos 7 Serviços -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- SERVIÇO 1: REBOCO TRADICIONAL -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-zinc-200 shadow-sm card-hover flex flex-col">
+                    <div class="relative h-56 overflow-hidden bg-bmb-black">
+                        <!-- IMAGEM DO SERVIÇO 1: REBOCO TRADICIONAL -->
+                        <img src="https://i.postimg.cc/PrfG8ZG3/IMG-de910b9a-4382-42c0-8475-c9ab63b2cff0.jpg" 
+                             onerror="this.src='https://placehold.co/800x500/141414/FFCC00?text=Reboco+Tradicional'"
+                             alt="Serviço de Reboco Tradicional - BMB Construções" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-bmb-black/90 text-bmb-yellow font-bold text-xs px-3 py-1.5 rounded-lg border border-bmb-yellow/40">
+                            <i class="fa-solid fa-trowel mr-1"></i> Acabamento Liso
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl text-bmb-black mb-2">1. Reboco Tradicional</h3>
+                            <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+                                Revestimento e regularização de paredes internas e externas com prumo rigoroso, superfície lisa e uniforme, pronta para receber pintura ou revestimento.
+                            </p>
+                        </div>
+                        <!-- LINK PARA ORÇAR SERVIÇO 1: REBOCO TRADICIONAL -->
+                        <a href="#orcamento" onclick="selecionarServico('Reboco tradicional')" class="w-full py-3 px-4 rounded-xl bg-bmb-black hover:bg-bmb-yellow text-white hover:text-bmb-black font-bold text-sm transition flex items-center justify-center gap-2">
+                            Orçar Reboco Tradicional <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVIÇO 2: REBOCO GREGO -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-zinc-200 shadow-sm card-hover flex flex-col">
+                    <div class="relative h-56 overflow-hidden bg-bmb-black">
+                        <!-- IMAGEM DO SERVIÇO 2: REBOCO GREGO -->
+                        <img src="https://i.postimg.cc/W1RMHm2Y/IMG-20260829-WA0006.jpg" 
+                             onerror="this.src='https://placehold.co/800x500/141414/FFCC00?text=Reboco+Grego'"
+                             alt="Serviço de Reboco Grego - BMB Construções" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-bmb-black/90 text-bmb-yellow font-bold text-xs px-3 py-1.5 rounded-lg border border-bmb-yellow/40">
+                            <i class="fa-solid fa-layer-group mr-1"></i> Textura & Proteção
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl text-bmb-black mb-2">2. Reboco Grego</h3>
+                            <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+                                Acabamento rústico e moderno de alta resistência para muros e fachadas. Excelente proteção contra umidade e ótimo custo-benefício estético.
+                            </p>
+                        </div>
+                        <!-- LINK PARA ORÇAR SERVIÇO 2: REBOCO GREGO -->
+                        <a href="#orcamento" onclick="selecionarServico('Reboco grego')" class="w-full py-3 px-4 rounded-xl bg-bmb-black hover:bg-bmb-yellow text-white hover:text-bmb-black font-bold text-sm transition flex items-center justify-center gap-2">
+                            Orçar Reboco Grego <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVIÇO 3: CONTRAPISO -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-zinc-200 shadow-sm card-hover flex flex-col">
+                    <div class="relative h-56 overflow-hidden bg-bmb-black">
+                        <!-- IMAGEM DO SERVIÇO 3: CONTRAPISO -->
+                        <img src="https://i.postimg.cc/d33MkkDZ/Screenshot-2026.png" 
+                             onerror="this.src='https://placehold.co/800x500/141414/FFCC00?text=Contrapiso'"
+                             alt="Serviço de Contrapiso - BMB Construções" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-bmb-black/90 text-bmb-yellow font-bold text-xs px-3 py-1.5 rounded-lg border border-bmb-yellow/40">
+                            <i class="fa-solid fa-ruler-combined mr-1"></i> Nivelamento Preciso
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl text-bmb-black mb-2">3. Contrapiso</h3>
+                            <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+                                Execução de contrapiso nivelado com caimento exato para ralos e áreas molhadas, garantindo uma base firme e perfeita para porcelanatos e pisos.
+                            </p>
+                        </div>
+                        <!-- LINK PARA ORÇAR SERVIÇO 3: CONTRAPISO -->
+                        <a href="#orcamento" onclick="selecionarServico('Contrapiso')" class="w-full py-3 px-4 rounded-xl bg-bmb-black hover:bg-bmb-yellow text-white hover:text-bmb-black font-bold text-sm transition flex items-center justify-center gap-2">
+                            Orçar Contrapiso <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVIÇO 4: INSTALAÇÃO DE TELHAS -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-zinc-200 shadow-sm card-hover flex flex-col">
+                    <div class="relative h-56 overflow-hidden bg-bmb-black">
+                        <!-- IMAGEM DO SERVIÇO 4: INSTALAÇÃO DE TELHAS -->
+                        <img src="https://i.postimg.cc/L413R4yp/Screenshot-20261013-210706-Photos.png" 
+                             onerror="this.src='https://placehold.co/800x500/141414/FFCC00?text=Instalacao+de+Telhas'"
+                             alt="Serviço de Instalação de Telhas - BMB Construções" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-bmb-black/90 text-bmb-yellow font-bold text-xs px-3 py-1.5 rounded-lg border border-bmb-yellow/40">
+                            <i class="fa-solid fa-house-chimney mr-1"></i> Cobertura & Telhados
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl text-bmb-black mb-2">4. Instalação de Telhas</h3>
+                            <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+                                Colocação cuidadosa de telhas cerâmicas, fibrocimento ou ecológicas, com alinhamento impecável, encaixe seguro e proteção total contra chuvas.
+                            </p>
+                        </div>
+                        <!-- LINK PARA ORÇAR SERVIÇO 4: INSTALAÇÃO DE TELHAS -->
+                        <a href="#orcamento" onclick="selecionarServico('Instalação de telhas')" class="w-full py-3 px-4 rounded-xl bg-bmb-black hover:bg-bmb-yellow text-white hover:text-bmb-black font-bold text-sm transition flex items-center justify-center gap-2">
+                            Orçar Instalação de Telhas <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVIÇO 5: MANUTENÇÃO EM TELHADOS -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-zinc-200 shadow-sm card-hover flex flex-col">
+                    <div class="relative h-56 overflow-hidden bg-bmb-black">
+                        <!-- IMAGEM DO SERVIÇO 5: MANUTENÇÃO EM TELHADOS -->
+                        <img src="https://i.postimg.cc/zBDvQvbC/IMG-20261021-112536250-HDR.jpg" 
+                             onerror="this.src='https://placehold.co/800x500/141414/FFCC00?text=Manutencao+em+Telhados'"
+                             alt="Serviço de Manutenção em Telhados - BMB Construções" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-bmb-black/90 text-bmb-yellow font-bold text-xs px-3 py-1.5 rounded-lg border border-bmb-yellow/40">
+                            <i class="fa-solid fa-shield-halved mr-1"></i> Zero Infiltração
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl text-bmb-black mb-2">5. Manutenção em Telhados</h3>
+                            <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+                                Revisão completa de telhados, substituição de telhas quebradas, eliminação de goteiras, chumbar cumeeiras e prevenção contra infiltrações.
+                            </p>
+                        </div>
+                        <!-- LINK PARA ORÇAR SERVIÇO 5: MANUTENÇÃO EM TELHADOS -->
+                        <a href="#orcamento" onclick="selecionarServico('Manutenção em telhados')" class="w-full py-3 px-4 rounded-xl bg-bmb-black hover:bg-bmb-yellow text-white hover:text-bmb-black font-bold text-sm transition flex items-center justify-center gap-2">
+                            Orçar Manutenção <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVIÇO 6: PEQUENOS REPAROS -->
+                <article class="bg-white rounded-2xl overflow-hidden border border-zinc-200 shadow-sm card-hover flex flex-col">
+                    <div class="relative h-56 overflow-hidden bg-bmb-black">
+                        <!-- IMAGEM DO SERVIÇO 6: PEQUENOS REPAROS -->
+                        <img src="https://i.postimg.cc/Zn8fqJxp/IMG-20260926-104752685-HDR.jpg" 
+                             onerror="this.src='https://placehold.co/800x500/141414/FFCC00?text=Pequenos+Reparos'"
+                             alt="Serviço de Pequenos Reparos - BMB Construções" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-bmb-black/90 text-bmb-yellow font-bold text-xs px-3 py-1.5 rounded-lg border border-bmb-yellow/40">
+                            <i class="fa-solid fa-hammer mr-1"></i> Soluções Rápidas
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl text-bmb-black mb-2">6. Pequenos Reparos</h3>
+                            <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+                                Consertos gerais em residências e comércios: correção de trincas, retoques de massa, assentamentos pontuais e ajustes essenciais no dia a dia.
+                            </p>
+                        </div>
+                        <!-- LINK PARA ORÇAR SERVIÇO 6: PEQUENOS REPAROS -->
+                        <a href="#orcamento" onclick="selecionarServico('Pequenos reparos')" class="w-full py-3 px-4 rounded-xl bg-bmb-black hover:bg-bmb-yellow text-white hover:text-bmb-black font-bold text-sm transition flex items-center justify-center gap-2">
+                            Orçar Pequenos Reparos <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- SERVIÇO 7: ALVENARIA (CARD EM DESTAQUE OCUPANDO LARGURA TOTAL NO DESKTOP OU CENTRALIZADO) -->
+                <article class="bg-white rounded-2xl overflow-hidden border-2 border-bmb-yellow shadow-md card-hover md:col-span-2 lg:col-span-3 flex flex-col lg:flex-row">
+                    <div class="relative lg:w-2/5 h-64 lg:h-auto overflow-hidden bg-bmb-black">
+                        <!-- IMAGEM DO SERVIÇO 7: ALVENARIA -->
+                        <img src="https://i.postimg.cc/X7NK5Kj4/IMG-4c8075c2-7c2e-45d7-9b34-57b7706ca07c.jpg" 
+                             onerror="this.src='https://placehold.co/1000x600/141414/FFCC00?text=Alvenaria+Profissional'"
+                             alt="Serviço de Alvenaria - BMB Construções" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-bmb-yellow text-bmb-black font-extrabold text-xs px-3 py-1.5 rounded-lg shadow">
+                            <i class="fa-solid fa-trowel-bricks mr-1"></i> Base & Estrutura
+                        </span>
+                    </div>
+                    <div class="p-8 lg:w-3/5 flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-amber-600 mb-2">
+                            <i class="fa-solid fa-star"></i> Serviço Essencial
+                        </div>
+                        <h3 class="font-display font-black text-2xl sm:text-3xl text-bmb-black mb-3">7. Alvenaria em Geral</h3>
+                        <p class="text-zinc-600 text-base leading-relaxed mb-6">
+                            Levantamento de paredes, muros, divisórias e fechamentos em tijolos cerâmicos ou blocos de concreto. Trabalho executado com rigoroso controle de nível, prumo e esquadro para garantir segurança, durabilidade e economia no acabamento.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <!-- LINK PARA ORÇAR SERVIÇO 7: ALVENARIA -->
+                            <a href="#orcamento" onclick="selecionarServico('Alvenaria')" class="px-6 py-3.5 rounded-xl bg-bmb-yellow hover:bg-bmb-yellowHover text-bmb-black font-display font-extrabold text-sm transition shadow-sm flex items-center gap-2">
+                                Solicitar Orçamento de Alvenaria <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         3. SEÇÃO SOBRE MIM & PILARES DE QUALIDADE (CONFORME ESPECIFICAÇÃO DO PDF)
+         ============================================================================ -->
+    <section id="sobre" class="py-20 bg-bmb-black text-white pattern-grid relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Bloco Principal: Apresentação do Bruno + Identidade Visual BMB Construções -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                
+                <!-- Coluna da Logo / Identidade Visual em Destaque -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-sm bg-bmb-yellow rounded-3xl p-8 border-4 border-white/10 shadow-2xl text-center relative">
+                        <div class="bg-bmb-yellow rounded-2xl p-4 mx-auto w-56 h-56 flex items-center justify-center">
+                            <!-- 
+                                 NOTA PARA EDIÇÃO MANUAL DA LOGO NA SEÇÃO SOBRE MIM:
+                                 Para utilizar um arquivo de imagem externo, descomente a linha <img> abaixo.
+                            -->
+                            <!-- IMAGEM DA LOGO BMB CONSTRUÇÕES EM DESTAQUE NA SEÇÃO SOBRE MIM (OPCIONAL) -->
+                            <img src="https://i.postimg.cc/JhRBwMs7/Screenshot-20261030-190927-System-UI.png" alt="Logo BMB Construções" class="w-full h-full object-contain"> 
+
+                            <!-- IMAGEM VETORIAL DA LOGO BMB CONSTRUÇÕES NA SEÇÃO SOBRE MIM -->
+                            <svg viewBox="0 0 200 200" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BMB Construções Logo Oficial">
+                                <path d="M100 22L28 65V79L100 36L172 79V65L100 22Z" fill="#0F0F0F"/>
+                                <rect x="57" y="34" width="13" height="22" fill="#0F0F0F"/>
+                                <path d="M44 77L74 59V137L44 119V77ZM53 83V94H65V71L53 78V83ZM53 102V113L65 120V102H53Z" fill="#0F0F0F"/>
+                                <path d="M79 56L89 50L100 88L111 50L121 56V141L112 146V77L103 105H97L88 77V146L79 141V56Z" fill="#0F0F0F"/>
+                                <path d="M126 59L156 77V119L126 137V59ZM135 71V94H147V78L135 71ZM135 102V120L147 113V102H135Z" fill="#0F0F0F"/>
+                                <path d="M44 126L94 155V166L44 137V126Z" fill="#0F0F0F"/>
+                                <path d="M156 126L106 155V166L156 137V126Z" fill="#0F0F0F"/>
+                                <path d="M100 124C96 124 91 139 91 143C91 145 95 146 99 146V154H97V168C97 171 98.5 173 100 173C101.5 173 103 171 103 168V154H101V146C105 146 109 145 109 143C109 139 104 124 100 124Z" fill="#0F0F0F"/>
+                                <text x="100" y="193" text-anchor="middle" fill="#0F0F0F" font-family="Montserrat, sans-serif" font-weight="900" font-size="19" letter-spacing="0.5">CONSTRUÇÕES</text>
+                            </svg>
+                        </div>
+                        <div class="mt-4 pt-4 border-t-2 border-bmb-black/15">
+                            <span class="block font-display font-black text-bmb-black text-lg">Bruno — BMB Construções</span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-bmb-black/80">Profissional MEI • Obra & Acabamento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna de Texto: Sobre Mim -->
+                <div class="lg:col-span-7">
+                    <span class="inline-block px-4 py-1.5 rounded-md bg-bmb-yellow text-bmb-black font-display font-extrabold text-xs uppercase tracking-wider mb-4">
+                        SOBRE MIM
+                    </span>
+                    <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight mb-6">
+                        Compromisso Direto com a <span class="text-bmb-yellow">Qualidade da Sua Obra</span>
+                    </h2>
+                    
+                    <!-- Texto Oficial do PDF -->
+                    <blockquote class="bg-zinc-900/90 border-l-4 border-bmb-yellow p-6 rounded-r-2xl text-gray-100 text-lg sm:text-xl leading-relaxed font-medium mb-6 shadow-lg">
+                        "Me chamo <strong class="text-bmb-yellow font-extrabold">Bruno</strong>, tenho quase dois anos de experiência na área, atuo na execução de serviços gerais na obra e sempre busco entregar a melhor qualidade de serviço e preço para o meu cliente."
+                    </blockquote>
+
+                    <p class="text-gray-300 text-base leading-relaxed mb-8">
+                        Na <strong>BMB Construções</strong>, cada projeto é tratado com respeito ao seu investimento e ao seu imóvel. Meu foco é oferecer um atendimento honesto, explicando cada etapa do serviço e garantindo que o resultado final supere a sua expectativa.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <!-- LINK PARA FALAR COM O BRUNO / IR PARA ORÇAMENTO -->
+                        <a href="#orcamento" class="px-6 py-3.5 rounded-xl bg-bmb-yellow hover:bg-bmb-yellowHover text-bmb-black font-display font-extrabold text-sm transition flex items-center gap-2">
+                            <i class="fa-solid fa-helmet-safety"></i> Solicitar Orçamento com o Bruno
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OS 3 PILARES FUNDAMENTAIS DO PDF: CAPRICHO, TRANSPARÊNCIA E PONTUALIDADE, LIMPEZA E ORGANIZAÇÃO -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6 border-t border-zinc-800">
+                
+                <!-- Pilar 1: Capricho -->
+                <div class="bg-zinc-900/90 border border-zinc-800 hover:border-bmb-yellow/60 rounded-2xl p-7 transition card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-bmb-yellow text-bmb-black flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Capricho</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Cuidado minucioso com qualquer trabalho, além do compromisso e esforço dedicado em cada detalhe para entregar um serviço de altíssima qualidade.
+                    </p>
+                </div>
+
+                <!-- Pilar 2: Transparência e Pontualidade -->
+                <div class="bg-zinc-900/90 border border-zinc-800 hover:border-bmb-yellow/60 rounded-2xl p-7 transition card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-bmb-yellow text-bmb-black flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Transparência e Pontualidade</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Cumprimento rigoroso dos prazos combinados e comunicação clara e honesta sobre o andamento da obra e as reais necessidades de materiais.
+                    </p>
+                </div>
+
+                <!-- Pilar 3: Limpeza e Organização -->
+                <div class="bg-zinc-900/90 border border-zinc-800 hover:border-bmb-yellow/60 rounded-2xl p-7 transition card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-bmb-yellow text-bmb-black flex items-center justify-center text-2xl mb-5 shadow-md">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Limpeza e Organização</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Ambiente de trabalho sempre limpo e organizado ao fim do dia, respeitando o imóvel, a rotina e o bem-estar da família do cliente.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         4. SEÇÃO DE FERRAMENTAS (COM REDIRECIONAMENTO AO CLICAR NO NOME DA FERRAMENTA)
+         Conforme PDF: "Será o local que terá as imagens de cada ferramenta e quando a
+         pessoa clicar em cima do nome da ferramenta irá redirecionar ela para onde eu comprei."
+         ============================================================================ -->
+    <section id="ferramentas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Cabeçalho da Seção de Ferramentas -->
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block px-4 py-1.5 rounded-md bg-bmb-yellow text-bmb-black font-display font-extrabold text-xs uppercase tracking-wider mb-3 shadow-sm">
+                    EQUIPAMENTOS DE TRABALHO
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-bmb-black tracking-tight mb-4">
+                    Minhas Ferramentas
+                </h2>
+                <p class="text-zinc-600 text-base sm:text-lg mb-4">
+                    Utilizo ferramentas adequadas para garantir precisão, rapidez e acabamento superior na sua obra.
+                </p>
+                <!-- Aviso interativo de clique no nome -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-100 border border-zinc-300 text-xs sm:text-sm font-semibold text-zinc-800">
+                    <i class="fa-solid fa-hand-pointer text-amber-600"></i>
+                    <span>Dica: <strong>Clique em cima do nome da ferramenta</strong> para ir direto à loja onde comprei!</span>
+                </div>
+            </div>
+
+            <!-- Grid de Ferramentas -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- FERRAMENTA 1: ESMERILHADEIRA COM REGULAÇÃO DE VELOCIDADE -->
+                <div class="bg-bmb-light rounded-2xl border border-zinc-200 overflow-hidden shadow-sm card-hover flex flex-col">
+                    <div class="relative h-52 bg-white p-4 flex items-center justify-center border-b border-zinc-200 overflow-hidden">
+                        <!-- IMAGEM DA FERRAMENTA 1: ESMERILHADEIRA COM REGULAÇÃO DE VELOCIDADE -->
+                        <img src="https://i.postimg.cc/vBHgG3mT/Screenshot-20261102-093406-Mercado-Libre.png" 
+                             onerror="this.src='https://placehold.co/600x400/141414/FFCC00?text=Esmerilhadeira'"
+                             alt="Esmerilhadeira com Regulação de Velocidade" 
+                             class="w-full h-full object-cover rounded-xl">
+                        <span class="absolute top-3 right-3 bg-bmb-yellow text-bmb-black text-xs font-extrabold px-2.5 py-1 rounded-md shadow">
+                            Corte & Acabamento
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <!-- LINK DE COMPRA DA FERRAMENTA 1 (AO CLICAR NO NOME DA FERRAMENTA) -->
+                            <!-- Substitua o href abaixo pelo link exato da loja onde comprou a Esmerilhadeira -->
+                            <a href="https://meli.la/2BuH4LA" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="group inline-block focus:outline-none"
+                               title="Clique para ver onde comprei esta ferramenta">
+                                <h3 class="font-display font-extrabold text-lg text-bmb-black group-hover:text-amber-600 underline decoration-bmb-yellow decoration-2 underline-offset-4 transition flex items-start justify-between gap-2">
+                                    <span>Serra Mármore Profissional Vonder</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs mt-1.5 text-zinc-400 group-hover:text-amber-600 shrink-0"></i>
+                                </h3>
+                            </a>
+                            <p class="text-zinc-600 text-xs sm:text-sm mt-3 leading-relaxed">
+                                Indicada para uso na construção civil para cortar mármore, granito, concreto, alvenaria, telha, tijolo, ardósia, pedras em geral, madeira, entre outros.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-zinc-200">
+                            <!-- LINK SECUNDÁRIO DA FERRAMENTA 1 (BOTÃO VER ONDE COMPREI) -->
+                            <a href="https://meli.la/2BuH4LA" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="text-xs font-extrabold uppercase tracking-wider text-bmb-black hover:text-amber-600 flex items-center justify-between">
+                                <span>Ver onde comprei</span>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FERRAMENTA 2: MARTELETE / FURADEIRA DE IMPACTO -->
+                <div class="bg-bmb-light rounded-2xl border border-zinc-200 overflow-hidden shadow-sm card-hover flex flex-col">
+                    <div class="relative h-52 bg-white p-4 flex items-center justify-center border-b border-zinc-200 overflow-hidden">
+                        <!-- IMAGEM DA FERRAMENTA 2: MARTELETE PERFURADOR E ROMPEDOR -->
+                        <img src="https://i.postimg.cc/3Jws2pkv/Screenshot-20261102-094132-Mercado-Libre.png" 
+                             onerror="this.src='https://placehold.co/600x400/141414/FFCC00?text=Martelete+Rompedor'"
+                             alt="Martelete Perfurador e Rompedor" 
+                             class="w-full h-full object-cover rounded-xl">
+                        <span class="absolute top-3 right-3 bg-bmb-yellow text-bmb-black text-xs font-extrabold px-2.5 py-1 rounded-md shadow">
+                            Perfuração & Obra
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <!-- LINK DE COMPRA DA FERRAMENTA 2 (AO CLICAR NO NOME DA FERRAMENTA) -->
+                            <!-- Substitua o href abaixo pelo link exato da loja onde comprou o Martelete/Furadeira -->
+                            <a href="https://meli.la/2fJWxS5" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="group inline-block focus:outline-none"
+                               title="Clique para ver onde comprei esta ferramenta">
+                                <h3 class="font-display font-extrabold text-lg text-bmb-black group-hover:text-amber-600 underline decoration-bmb-yellow decoration-2 underline-offset-4 transition flex items-start justify-between gap-2">
+                                    <span>Parafusadeira e Furadeira de Impacto 3/8" WAP</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs mt-1.5 text-zinc-400 group-hover:text-amber-600 shrink-0"></i>
+                                </h3>
+                            </a>
+                            <p class="text-zinc-600 text-xs sm:text-sm mt-3 leading-relaxed">
+                                A Parafusadeira e Furadeira de Impacto WAP K21 ID02 é uma ferramenta versátil e robusta, projetada para enfrentar projetos de diferentes tamanhos.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-zinc-200">
+                            <!-- LINK SECUNDÁRIO DA FERRAMENTA 2 (BOTÃO VER ONDE COMPREI) -->
+                            <a href="https://meli.la/2fJWxS5" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="text-xs font-extrabold uppercase tracking-wider text-bmb-black hover:text-amber-600 flex items-center justify-between">
+                                <span>Ver onde comprei</span>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FERRAMENTA 3: NÍVEL A LASER / NÍVEL DE PRECISÃO -->
+                <div class="bg-bmb-light rounded-2xl border border-zinc-200 overflow-hidden shadow-sm card-hover flex flex-col">
+                    <div class="relative h-52 bg-white p-4 flex items-center justify-center border-b border-zinc-200 overflow-hidden">
+                        <!-- IMAGEM DA FERRAMENTA 3: NÍVEL A LASER PROFISSIONAL -->
+                        <img src="https://i.postimg.cc/MHfy8dsX/Screenshot-20261102-094604-Mercado-Libre.png" 
+                             onerror="this.src='https://placehold.co/600x400/141414/FFCC00?text=Nivel+a+Laser'"
+                             alt="Nível a Laser de Linhas Verdes" 
+                             class="w-full h-full object-cover rounded-xl">
+                        <span class="absolute top-3 right-3 bg-bmb-yellow text-bmb-black text-xs font-extrabold px-2.5 py-1 rounded-md shadow">
+                            Alinhamento Exato
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <!-- LINK DE COMPRA DA FERRAMENTA 3 (AO CLICAR NO NOME DA FERRAMENTA) -->
+                            <!-- Substitua o href abaixo pelo link exato da loja onde comprou o Nível a Laser -->
+                            <a href="https://meli.la/1VXPz77" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="group inline-block focus:outline-none"
+                               title="Clique para ver onde comprei esta ferramenta">
+                                <h3 class="font-display font-extrabold text-lg text-bmb-black group-hover:text-amber-600 underline decoration-bmb-yellow decoration-2 underline-offset-4 transition flex items-start justify-between gap-2">
+                                    <span>Nível a Laser Autonivelante 2 linhas</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs mt-1.5 text-zinc-400 group-hover:text-amber-600 shrink-0"></i>
+                                </h3>
+                            </a>
+                            <p class="text-zinc-600 text-xs sm:text-sm mt-3 leading-relaxed">
+                                O Nível a Laser é uma ferramenta multiuso de grande utilidade para alinhar objetos, como móveis, prateleiras, quadros, ou para construir paredes, aplicar revestimentos e diversas outras aplicações.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-zinc-200">
+                            <!-- LINK SECUNDÁRIO DA FERRAMENTA 3 (BOTÃO VER ONDE COMPREI) -->
+                            <a href="https://meli.la/1VXPz77" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="text-xs font-extrabold uppercase tracking-wider text-bmb-black hover:text-amber-600 flex items-center justify-between">
+                                <span>Ver onde comprei</span>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FERRAMENTA 4: KIT COLHER DE PEDREIRO E DESEMPENADEIRA PROFISSIONAL -->
+                <div class="bg-bmb-light rounded-2xl border border-zinc-200 overflow-hidden shadow-sm card-hover flex flex-col">
+                    <div class="relative h-52 bg-white p-4 flex items-center justify-center border-b border-zinc-200 overflow-hidden">
+                        <!-- IMAGEM DA FERRAMENTA 4: KIT COLHER DE PEDREIRO E DESEMPENADEIRA -->
+                        <img src="https://i.postimg.cc/7P1zSGFk/Screenshot-20261102-095111-Mercado-Libre.png" 
+                             onerror="this.src='https://placehold.co/600x400/141414/FFCC00?text=Colher+de+Pedreiro'"
+                             alt="Colher de Pedreiro e Desempenadeira de Aço" 
+                             class="w-full h-full object-cover rounded-xl">
+                        <span class="absolute top-3 right-3 bg-bmb-yellow text-bmb-black text-xs font-extrabold px-2.5 py-1 rounded-md shadow">
+                            Armazenamento de Ferramentas
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <!-- LINK DE COMPRA DA FERRAMENTA 4 (AO CLICAR NO NOME DA FERRAMENTA) -->
+                            <!-- Substitua o href abaixo pelo link exato da loja onde comprou o Kit de Alvenaria -->
+                            <a href="https://meli.la/2NwXDTn" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="group inline-block focus:outline-none"
+                               title="Clique para ver onde comprei esta ferramenta">
+                                <h3 class="font-display font-extrabold text-lg text-bmb-black group-hover:text-amber-600 underline decoration-bmb-yellow decoration-2 underline-offset-4 transition flex items-start justify-between gap-2">
+                                    <span>Bolsa Maleta De Ferramentas Grande 18 Polegadas Reforçada 16 Bolsos</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs mt-1.5 text-zinc-400 group-hover:text-amber-600 shrink-0"></i>
+                                </h3>
+                            </a>
+                            <p class="text-zinc-600 text-xs sm:text-sm mt-3 leading-relaxed">
+                                A bolsa de ferramentas Travunker foi desenvolvida para organização e transporte de ferramentas em atividades profissionais e domésticas.
+                            </p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-zinc-200">
+                            <!-- LINK SECUNDÁRIO DA FERRAMENTA 4 (BOTÃO VER ONDE COMPREI) -->
+                            <a href="https://meli.la/2NwXDTn" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="text-xs font-extrabold uppercase tracking-wider text-bmb-black hover:text-amber-600 flex items-center justify-between">
+                                <span>Ver onde comprei</span>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         5. SEÇÃO DE REDES SOCIAIS (TIKTOK E INSTAGRAM CONFORME PDF)
+         ============================================================================ -->
+    <section id="redes-sociais" class="py-20 bg-bmb-light border-t border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block px-4 py-1.5 rounded-md bg-bmb-yellow text-bmb-black font-display font-extrabold text-xs uppercase tracking-wider mb-3 shadow-sm">
+                    CONECTE-SE CONOSCO
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-bmb-black tracking-tight mb-4">
+                    Acompanhe Nossas Redes Sociais
+                </h2>
+                <p class="text-zinc-600 text-base sm:text-lg">
+                    Siga a <strong>BMB Construções</strong> no Instagram e no TikTok para ver vídeos reais do dia a dia na obra, dicas de construção e serviços finalizados.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+                <!-- CARD DO INSTAGRAM -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-zinc-200 hover:border-bmb-black shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white flex items-center justify-center text-3xl shadow-md">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-zinc-100 text-zinc-800 font-bold text-xs">
+                                @bruno_mateus248
+                            </span>
+                        </div>
+                        <h3 class="font-display font-black text-2xl text-bmb-black mb-2">Instagram Oficial</h3>
+                        <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+                            Videos e fotos dos meus serviços.
+                        </p>
+                    </div>
+                    <!-- LINK DO INSTAGRAM DA BMB CONSTRUÇÕES (ALTERE O HREF PARA SEU PERFIL REAL) -->
+                    <a href="https://www.instagram.com/bruno_mateus248" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-4 px-6 rounded-xl bg-bmb-black hover:bg-bmb-yellow text-white hover:text-bmb-black font-display font-extrabold text-sm transition flex items-center justify-center gap-3 shadow-md">
+                        <i class="fa-brands fa-instagram text-lg"></i> Seguir no Instagram
+                    </a>
+                </div>
+
+                <!-- CARD DO TIKTOK -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-zinc-200 hover:border-bmb-black shadow-sm card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-bmb-black text-bmb-yellow flex items-center justify-center text-3xl shadow-md border-2 border-bmb-yellow shrink-0">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-zinc-100 text-zinc-800 font-bold text-xs">
+                                @bruno_mateus240
+                            </span>
+                        </div>
+                        <h3 class="font-display font-black text-2xl text-bmb-black mb-2">TikTok Oficial</h3>
+                        <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+                            Vídeos do dia a dia na obra e execução dos meus serviços.
+                        </p>
+                    </div>
+                    <!-- LINK DO TIKTOK DA BMB CONSTRUÇÕES (ALTERE O HREF PARA SEU PERFIL REAL) -->
+                    <a href="https://www.tiktok.com/@bruno_mateus240" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-4 px-6 rounded-xl bg-bmb-yellow hover:bg-bmb-yellowHover text-bmb-black font-display font-extrabold text-sm transition flex items-center justify-center gap-3 shadow-md">
+                        <i class="fa-brands fa-tiktok text-lg"></i> Acompanhar no TikTok
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         6. SEÇÃO FINAL: FAÇA UM ORÇAMENTO (ENTRA COM FORÇA TOTAL NA SEÇÃO FINAL)
+         Conforme PDF:
+         - Bloco grande de "Solicite um orçamento" na seção final.
+         - Campos: Nome, Serviço, Cidade/Bairro e Descrição breve do serviço.
+         - Botão retangular na cor verde (WhatsApp) posicionado no meio do canto inferior.
+         ============================================================================ -->
+    <section id="orcamento" class="py-20 bg-bmb-black text-white relative overflow-hidden border-t-8 border-bmb-yellow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Cabeçalho do Bloco de Orçamento -->
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-1.5 rounded-md bg-bmb-yellow text-bmb-black font-display font-extrabold text-xs uppercase tracking-wider mb-3 shadow">
+                    ATENDIMENTO RÁPIDO E DIRETO
+                </span>
+                <h2 class="font-display font-black text-3xl sm:text-5xl text-white tracking-tight mb-4">
+                    Solicite um <span class="text-bmb-yellow">Orçamento Sem Compromisso</span>
+                </h2>
+                <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+                    Preencha os dados abaixo. Você será direcionado diretamente para o meu WhatsApp já com todas as informações preenchidas para agilizarmos seu atendimento!
+                </p>
+            </div>
+
+            <!-- Card do Formulário de Orçamento -->
+            <div class="bg-zinc-900 border-2 border-bmb-yellow/40 rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <form id="quote-form" class="space-y-6" onsubmit="enviarOrcamentoWhatsApp(event)">
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Campo 1: Nome do Cliente -->
+                        <div>
+                            <label for="cliente-nome" class="block text-sm font-bold text-bmb-yellow mb-2">
+                                <i class="fa-solid fa-user mr-1.5"></i> Seu Nome *
+                            </label>
+                            <input type="text" 
+                                   id="cliente-nome" 
+                                   required 
+                                   placeholder="Ex: João da Silva"
+                                   class="w-full px-4 py-3.5 rounded-xl bg-bmb-black border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-bmb-yellow focus:ring-1 focus:ring-bmb-yellow transition">
+                        </div>
+
+                        <!-- Campo 2: Seleção de Serviço -->
+                        <div>
+                            <label for="cliente-servico" class="block text-sm font-bold text-bmb-yellow mb-2">
+                                <i class="fa-solid fa-trowel-bricks mr-1.5"></i> Qual serviço você precisa? *
+                            </label>
+                            <select id="cliente-servico" 
+                                    required
+                                    class="w-full px-4 py-3.5 rounded-xl bg-bmb-black border border-zinc-700 text-white focus:outline-none focus:border-bmb-yellow focus:ring-1 focus:ring-bmb-yellow transition">
+                                <option value="" disabled selected>Selecione um serviço...</option>
+                                <option value="Reboco tradicional">Reboco tradicional</option>
+                                <option value="Reboco grego">Reboco grego</option>
+                                <option value="Contrapiso">Contrapiso</option>
+                                <option value="Instalação de telhas">Instalação de telhas</option>
+                                <option value="Manutenção em telhados">Manutenção em telhados</option>
+                                <option value="Pequenos reparos">Pequenos reparos</option>
+                                <option value="Alvenaria">Alvenaria</option>
+                                <option value="Mais de um serviço / Obra geral">Mais de um serviço / Obra geral</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Campo 3: Cidade / Bairro -->
+                    <div>
+                        <label for="cliente-local" class="block text-sm font-bold text-bmb-yellow mb-2">
+                            <i class="fa-solid fa-location-dot mr-1.5"></i> Cidade e Bairro da Obra *
+                        </label>
+                        <input type="text" 
+                               id="cliente-local" 
+                               required 
+                               placeholder="Ex: Minha Cidade - Bairro Centro"
+                               class="w-full px-4 py-3.5 rounded-xl bg-bmb-black border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-bmb-yellow focus:ring-1 focus:ring-bmb-yellow transition">
+                    </div>
+
+                    <!-- Campo 4: Descrição Breve do Serviço -->
+                    <div>
+                        <label for="cliente-descricao" class="block text-sm font-bold text-bmb-yellow mb-2">
+                            <i class="fa-solid fa-file-lines mr-1.5"></i> Descrição Breve do Serviço *
+                        </label>
+                        <textarea id="cliente-descricao" 
+                                  rows="4" 
+                                  required 
+                                  placeholder="Conte brevemente o que precisa ser feito (ex: metragem aproximada, estado atual do local, urgência...)"
+                                  class="w-full px-4 py-3.5 rounded-xl bg-bmb-black border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-bmb-yellow focus:ring-1 focus:ring-bmb-yellow transition"></textarea>
+                    </div>
+
+                    <!-- Feedback visual de envio -->
+                    <div id="form-feedback" class="hidden p-4 rounded-xl bg-whatsapp/20 border border-whatsapp text-white text-sm text-center font-medium">
+                        Redirecionando para o WhatsApp da BMB Construções...
+                    </div>
+
+                    <!-- BOTÃO RETANGULAR VERDE (WHATSAPP) POSICIONADO NO MEIO DA PARTE INFERIOR -->
+                    <div class="pt-4 flex flex-col items-center justify-center">
+                        <button type="submit" 
+                                class="w-full sm:w-auto min-w-[290px] px-10 py-4 rounded-lg bg-whatsapp hover:bg-whatsapp-dark text-white font-display font-black text-base sm:text-lg tracking-wide uppercase shadow-xl hover:shadow-2xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            Faça um Orçamento
+                        </button>
+                        <span class="text-xs text-zinc-400 mt-3 flex items-center gap-1.5">
+                            <i class="fa-solid fa-lock text-bmb-yellow"></i> Resposta rápida direto com o Bruno no WhatsApp
+                        </span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================
+         RODAPÉ (FOOTER COM A LOGO DA BMB CONSTRUÇÕES E LINKS RÁPIDOS)
+         ============================================================================ -->
+    <footer class="bg-zinc-950 text-gray-400 py-12 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-zinc-800 items-center">
+                
+                <!-- Coluna 1: Logo BMB no Rodapé -->
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-bmb-yellow rounded-xl p-1 flex items-center justify-center shrink-0">
+                        <!-- IMAGEM DA LOGO BMB CONSTRUÇÕES NO RODAPÉ (OPCIONAL PARA ARQUIVO LOCAL) -->
+                        <!-- <img src="Gemini_Generated_Image_jmkq99jmkq99jmkq.jpg" alt="Logo BMB Construções" class="w-full h-full object-contain"> -->
+
+                        <!-- IMAGEM VETORIAL DA LOGO BMB CONSTRUÇÕES NO RODAPÉ -->
+                        <svg viewBox="0 0 200 200" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo BMB Construções Rodapé">
+                            <path d="M100 22L28 65V79L100 36L172 79V65L100 22Z" fill="#0F0F0F"/>
+                            <rect x="57" y="34" width="13" height="22" fill="#0F0F0F"/>
+                            <path d="M44 77L74 59V137L44 119V77ZM53 83V94H65V71L53 78V83ZM53 102V113L65 120V102H53Z" fill="#0F0F0F"/>
+                            <path d="M79 56L89 50L100 88L111 50L121 56V141L112 146V77L103 105H97L88 77V146L79 141V56Z" fill="#0F0F0F"/>
+                            <path d="M126 59L156 77V119L126 137V59ZM135 71V94H147V78L135 71ZM135 102V120L147 113V102H135Z" fill="#0F0F0F"/>
+                            <path d="M44 126L94 155V166L44 137V126Z" fill="#0F0F0F"/>
+                            <path d="M156 126L106 155V166L156 137V126Z" fill="#0F0F0F"/>
+                            <path d="M100 124C96 124 91 139 91 143C91 145 95 146 99 146V154H97V168C97 171 98.5 173 100 173C101.5 173 103 171 103 168V154H101V146C105 146 109 145 109 143C109 139 104 124 100 124Z" fill="#0F0F0F"/>
+                            <text x="100" y="193" text-anchor="middle" fill="#0F0F0F" font-family="Montserrat, sans-serif" font-weight="900" font-size="19">CONSTRUÇÕES</text>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-display font-black text-xl text-white block">BMB Construções</span>
+                        <span class="text-xs text-bmb-yellow font-semibold">Capricho, Transparência e Pontualidade</span>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Links Rápidos do Rodapé -->
+                <div class="flex flex-wrap gap-x-6 gap-y-2 justify-start md:justify-center text-sm font-medium">
+                    <!-- LINK DO RODAPÉ: INÍCIO -->
+                    <a href="#inicio" class="hover:text-bmb-yellow transition">Início</a>
+                    <!-- LINK DO RODAPÉ: SERVIÇOS -->
+                    <a href="#servicos" class="hover:text-bmb-yellow transition">Serviços</a>
+                    <!-- LINK DO RODAPÉ: SOBRE MIM -->
+                    <a href="#sobre" class="hover:text-bmb-yellow transition">Sobre Mim</a>
+                    <!-- LINK DO RODAPÉ: FERRAMENTAS -->
+                    <a href="#ferramentas" class="hover:text-bmb-yellow transition">Ferramentas</a>
+                    <!-- LINK DO RODAPÉ: ORÇAMENTO -->
+                    <a href="#orcamento" class="hover:text-bmb-yellow transition">Orçamento</a>
+                </div>
+
+                <!-- Coluna 3: Redes Sociais no Rodapé -->
+                <div class="flex items-center md:justify-end gap-3">
+                    <!-- LINK DO INSTAGRAM NO RODAPÉ -->
+                    <a href="https://www.instagram.com/bruno_mateus248" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-zinc-900 hover:bg-bmb-yellow text-white hover:text-bmb-black flex items-center justify-center transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <!-- LINK DO TIKTOK NO RODAPÉ -->
+                    <a href="https://www.tiktok.com/bruno_mateus240" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-10 h-10 rounded-xl bg-zinc-900 hover:bg-bmb-yellow text-white hover:text-bmb-black flex items-center justify-center transition">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 text-center text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; <span id="ano-atual">2026</span> <strong>BMB Construções (MEI)</strong>. Todos os direitos reservados.</p>
+                <p>Desenvolvido com foco em qualidade, clareza e confiança para o cliente.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================================
+         BOTÃO FLUTUANTE DO WHATSAPP FIXO NO CANTO INFERIOR DA TELA O TEMPO TODO
+         (Inspirado fielmente no botão verde flutuante dos prints MasterBuild e PDF)
+         ============================================================================ -->
+    <!-- LINK DO WHATSAPP FLUTUANTE (ALTERE O NÚMERO 5500000000000 PARA O SEU NÚMERO COM DDD) -->
+    <a href="https://wa.me/5561992684341?text=Ol%C3%A1%20Bruno%2C%20vim%20pelo%20site%20da%20BMB%20Constru%C3%A7%C3%B5es%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Falar no WhatsApp"
+       class="fixed bottom-5 right-5 z-50 bg-whatsapp hover:bg-whatsapp-dark text-white font-display font-extrabold text-sm sm:text-base px-5 py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 whatsapp-pulse transition transform hover:scale-105">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- ============================================================================
+         SCRIPTS JAVASCRIPT (MENU MOBILE, SELEÇÃO DE SERVIÇO E ENVIO PARA WHATSAPP)
+         ============================================================================ -->
+    <script>
+        // ==========================================================================
+        // CONFIGURAÇÃO DO NÚMERO DO WHATSAPP DA BMB CONSTRUÇÕES
+        // Substitua os dígitos abaixo pelo seu número real (55 + DDD + Número)
+        // Exemplo: const NUMERO_WHATSAPP = "5511999999999";
+        // ==========================================================================
+        // LINK / NÚMERO DO WHATSAPP USADO NO FORMULÁRIO DE ORÇAMENTO
+        const NUMERO_WHATSAPP = "5561992684341";
+
+        // Atualiza o ano do rodapé automaticamente
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+        // Controle do Menu Mobile (Abrir/Fechar)
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Fecha o menu mobile ao clicar em qualquer link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Função que pré-seleciona o serviço clicado na seção "Nossos Serviços"
+        function selecionarServico(nomeServico) {
+            const selectServico = document.getElementById('cliente-servico');
+            if (selectServico) {
+                selectServico.value = nomeServico;
+                // Destaca brevemente o campo para o usuário perceber a seleção
+                selectServico.classList.add('ring-2', 'ring-bmb-yellow');
+                setTimeout(() => {
+                    selectServico.classList.remove('ring-2', 'ring-bmb-yellow');
+                }, 1800);
+            }
+        }
+
+        // Função para formatar os dados do formulário e abrir o WhatsApp
+        function enviarOrcamentoWhatsApp(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('cliente-nome').value.trim();
+            const servico = document.getElementById('cliente-servico').value;
+            const local = document.getElementById('cliente-local').value.trim();
+            const descricao = document.getElementById('cliente-descricao').value.trim();
+            const feedback = document.getElementById('form-feedback');
+
+            if (!nome || !servico || !local || !descricao) {
+                return;
+            }
+
+            // Monta a mensagem organizada para chegar no WhatsApp do Bruno
+            const mensagem = 
+                `Olá Bruno! Vim pelo site da *BMB Construções* e gostaria de solicitar um orçamento:\n\n` +
+                `*Nome:* ${nome}\n` +
+                `*Serviço:* ${servico}\n` +
+                `*Cidade/Bairro:* ${local}\n` +
+                `*Descrição do serviço:* ${descricao}`;
+
+            // LINK DINÂMICO DE ENVIO DO ORÇAMENTO PARA O WHATSAPP
+            const urlWhatsApp = `https://wa.me/${5561992684341}?text=${encodeURIComponent(mensagem)}`;
+
+            // Exibe mensagem de confirmação visual e abre o WhatsApp em nova aba
+            feedback.classList.remove('hidden');
+            window.open(urlWhatsApp, '_blank', 'noopener,noreferrer');
+
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html
